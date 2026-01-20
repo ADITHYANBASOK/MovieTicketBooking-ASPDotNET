@@ -137,19 +137,17 @@ This improves **system reliability** and **self-healing behavior**.
 
 The application uses SQL Server and Entity Framework Core.
 
-The database schema is created using **Entity Framework Core migrations**.
-Run the following command to create the database and tables:
+⚠️ **Important: Connection String Setup**
 
-```bash
-dotnet ef database update
-```
+Before running `dotnet ef database update`, ensure that a valid SQL Server
+connection string is configured in `appsettings.json`.
 
-Example:
+By default, the project is configured to run with **SQL Server LocalDB**:
 
 ```json
 {
   "ConnectionStrings": {
-    "Default": "Server=YOUR_SERVER;Database=MovieSeatBookingDb;Trusted_Connection=True;TrustServerCertificate=True"
+    "Default": "Server=(localdb)\\MSSQLLocalDB;Database=MovieSeatBookingDb;Trusted_Connection=True;TrustServerCertificate=True"
   }
 }
 ```
