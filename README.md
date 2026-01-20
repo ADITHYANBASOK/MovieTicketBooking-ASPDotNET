@@ -262,19 +262,30 @@ Booked
 
 Prerequisites
 
-- .NET SDK 7 or higher
+- .NET SDK **10.0**
+  Download: https://dotnet.microsoft.com/en-us/download/dotnet/10.0
+- SQL Server (LocalDB / SQL Server Express)
 
-- SQL Server
-
-Steps
-
+1. Clone the repository
 ```bash
-dotnet restore
+git clone https://github.com/ADITHYANBASOK/MovieTicketBooking-ASPDotNET.git
+cd MovieTicketBooking-ASPDotNET
+```
+2. Restore dependencies
+- Run this command inside the project directory:
+```bash
+dotnet restore MovieTicketBooking/MovieTicketBooking.csproj
+```
+3. Create database and apply migrations
+- Run EF Core commands from the project folder:
+```bash
+cd MovieTicketBooking
 dotnet ef database update
+```
+4. Run the application
+```bash
 dotnet run
 ```
-
-
 ---
 
 ## API Documentation (Swagger)
