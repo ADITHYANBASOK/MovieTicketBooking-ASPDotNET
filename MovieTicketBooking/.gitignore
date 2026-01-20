@@ -1,0 +1,25 @@
+# Build output
+bin/
+obj/
+
+# Environment specific
+appsettings.Development.json
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Local SQL Server files
+*.mdf
+*.ldf
+
+# OS files
+Thumbs.db
+.DS_Store
